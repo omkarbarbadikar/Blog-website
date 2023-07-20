@@ -23,8 +23,9 @@ app.use (cookieParser());
 import Router from './routes/routes.js';
 import Connection from "./database/db.js";
 
-const username = process.env.username;
-const password = process.env.password;
+const username = process.env.user;
+const password = process.env.pass;
+
 Connection(username, password);
 
 app.use('/', Router);
